@@ -35,5 +35,8 @@ def prompt_and_post():
         
         opener.open(urllib2.Request(logaddr, data))
 
+        if "echo" == cmd.split()[0]:
+            print(cmd[3:])
+
 if __name__ == "__main__":
     prompt_and_post()
